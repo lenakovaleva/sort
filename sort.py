@@ -16,7 +16,7 @@ def get_order(order_str):
 
     if len(split_letters) != len(set(split_letters)):
         raise ValueError('Правило не должно содержать повторяющиеся буквы')
-    elif len(order) < 1 or len(order)==0 or (order.isalpha and len(order)== 1):
+    elif len(order) < 1 or (order.isalpha() and len(order)== 1):
         raise ValueError('Правило должно содержать минимум 2 буквы')
     elif no_spaces.count('<') != len(order)-1:
         raise ValueError('Пропишите знак "<" для всех букв')
